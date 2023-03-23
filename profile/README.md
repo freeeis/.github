@@ -95,6 +95,9 @@ $ git clone https://github.com/freeeis/free-be-starter-kit.git be
 $ cd be
 $ yarn install
 
+# 创建存放机密数据的文件（也可手动创建）
+$ touch global.js
+
 # 运行
 $ yarn start
 
