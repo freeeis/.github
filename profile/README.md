@@ -9,18 +9,18 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/free-be-starter-kit">
-    <img src="https://img.shields.io/npm/v/free-be-starter-kit" alt="Version">
+  <a href="https://www.npmjs.com/package/free-fe-starter-kit">
+    <img src="https://img.shields.io/npm/v/free-fe-starter-kit" alt="Version">
   </a>
-  <a href="https://www.npmjs.com/package/free-be-starter-kit">
-    <img src="https://img.shields.io/npm/dm/free-be-starter-kit" alt="Download">
+  <a href="https://www.npmjs.com/package/free-fe-starter-kit">
+    <img src="https://img.shields.io/npm/dm/free-fe-starter-kit" alt="Download">
   </a>
   <a href="https://github.com/didi/LogicFlow/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/free-be-starter-kit" alt="LICENSE">
+    <img src="https://img.shields.io/npm/l/free-fe-starter-kit" alt="LICENSE">
   </a>
 </p>
 
-简体中文 | [English](/profile/README.en-us.md)
+简体中文 | [English](https://github.com/freeeis/.github/blob/main/profile/README.en-us.md)
 
 [更多文档](https://freeeis.aslancer.com)（完善中……）
 
@@ -30,7 +30,7 @@ FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨
 
 
 - 🛠 高扩展性
-  
+
   “一切”皆可为模块，从一个漂亮的按钮、一个简单的运算工具函数，到一套完备的ERP系统，都可以做为FreeEIS中的模块。模块拆分灵活，模块间可零耦合，模块即插即用。同时考虑模块自身的扩展性，可开发模块做为另一模块的“插件”。
 
 - 🎯 聚焦业务逻辑
@@ -38,13 +38,13 @@ FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨
   FreeEIS内核将与业务逻辑无关的功能预制，使得开发人员只需要考虑模块内部的业务逻辑，诸如模块加载、引用依赖、多语言支持、多样式支持、数据模型生成、权限管理与控制、路由生成、Mock功能等等都已经内置在FreeEIS内核中，模块开发过程中不需要再做考虑。特别是像数据模型生成、权限管理与控制，这类通常会消耗开发者大量精力的部分，也被剥离解耦，大大提高了开发效率。
 
 - 🚀 快速集成
-  
+
   FreeEIS中所有的功能都被拆分成大大小小的模块，在需要整合成为一整套系统的时候，只需要配置所需要的模块，或将模块代码（目录）放到统一的位置，FreeEIS内核将自动加载所有需要的模块，并整合为一套完整的系统。这使得系统级的组装更加灵活，可以根据需要极速集成成为大小和功能完全不同的完整系统。
 
 - 🍹 不改变开发习惯
 
   FreeEIS尽力做到少封装，无SDK，避免改变现有的开发习惯。一个脚手架工程 + 一套简单的规范就可以实现快速的系统开发。
-  
+
 
 - 🚪 代码安全
 
@@ -67,8 +67,6 @@ FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨
 
 ### 前端
 
-在使用前端前，请先安装NodeJs。
-
 ```sh
 # 安装前端脚手架
 
@@ -86,7 +84,7 @@ $ yarn start
 
 ### 后端
 
-在使用后端前，请先安装NodeJs、MongoDB和Redis，也可以使用远程部署的实例，FreeEIS的相关内置模块允许配置其地址和端口。另外，Redis不是必须的，如果无法连接到Redis，FreeEIS将使用[memory-cache](https://github.com/ptarjan/node-cache#readme)做为缓存，这不会影响开发或运行。
+在使用后端前，请先安装MongoDB和Redis，也可以使用远程部署的实例，FreeEIS的相关内置模块允许配置其地址和端口。另外，Redis不是必须的，如果无法连接到Redis，FreeEIS将使用[memory-cache](https://github.com/ptarjan/node-cache#readme)做为缓存，这不会影响开发或运行。
 
 ```sh
 # 安装后端脚手架
@@ -116,8 +114,8 @@ $ yarn start
 | 模块      | 前端模块 | 后端模块 | 功能 | 说明|
 | :------- |------- |------- | ----|----: |
 | 内核 | [free-fe-core](https://github.com/freeeis/free-fe-core) | [free-be-core](https://github.com/freeeis/free-be-core) | 加载其他模块|默认添加在脚手架中|
-| 基础功能 | [free-fe-core-modules](https://github.com/freeeis/free-fe-core-modules) | [free-be-core-modules](https://github.com/freeeis/free-be-core-modules)| 数据字典、日志、菜单管理、系统配置、错误代码管理、缓存管理、哀悼日、文件处理、数据校验方法、多语言支持、多皮肤支持等等 | 默认添加在脚手架中|
-| 账号管理 | [free-fe-account](https://github.com/freeeis/free-fe-account) | [free-be-account](https://github.com/freeeis/free-be-account) |账号管理、组织结构管理、权限管理、角色管理、权限控制| 默认添加在脚手架中|
+| 基础功能 | [free-fe-core-modules](https://github.com/freeeis/free-fe-core-modules) | [free-be-core-modules](https://github.com/freeeis/free-be-core-modules)| 数据字典、日志、菜单管理、系统配置、<br>错误代码管理、缓存管理、哀悼日、<br>文件处理、数据校验方法、<br>多语言支持、多皮肤支持等等 | 默认添加在脚手架中|
+| 账号管理 | [free-fe-account](https://github.com/freeeis/free-fe-account) | [free-be-account](https://github.com/freeeis/free-be-account) |账号管理、组织结构管理、权限管理、<br>角色管理、权限控制| 默认添加在脚手架中|
 | 数据库 | / | [free-be-mongodb](https://github.com/freeeis/free-be-mongodb) |数据库操作| 默认添加在脚手架中|
 | 演示模块 | [free-fe-demo](https://github.com/freeeis/free-fe-demo) | [free-be-demo](https://github.com/freeeis/free-be-demo) |演示模块内部结构和使用方法| 默认添加在脚手架中|
 
