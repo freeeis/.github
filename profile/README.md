@@ -67,6 +67,8 @@ FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨
 
 ### 前端
 
+在使用前端前，请先安装NodeJs。
+
 ```sh
 # 安装前端脚手架
 
@@ -84,7 +86,7 @@ $ yarn start
 
 ### 后端
 
-在使用后端前，请先安装MongoDB和Redis，也可以使用远程部署的实例，FreeEIS的相关内置模块允许配置其地址和端口。另外，Redis不是必须的，如果无法连接到Redis，FreeEIS将使用[memory-cache](https://github.com/ptarjan/node-cache#readme)做为缓存，这不会影响开发或运行。
+在使用后端前，请先安装NodeJs、MongoDB和Redis，也可以使用远程部署的实例，FreeEIS的相关内置模块允许配置其地址和端口。另外，Redis不是必须的，如果无法连接到Redis，FreeEIS将使用[memory-cache](https://github.com/ptarjan/node-cache#readme)做为缓存，这不会影响开发或运行。
 
 ```sh
 # 安装后端脚手架
