@@ -24,7 +24,41 @@
 
 [更多文档](https://freeeis.aslancer.com)（完善中……）
 
+
 FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨在解决越来越流行的远程协作开发中，系统拆分及组装的问题。并且通过积累越来越多的功能模块，使得系统的搭建更快捷。
+
+## 背景
+```
+ - 远程协作已经成为明显的趋势，特别是在软件开发领域。在疫情的影响下，此趋势更是越来越显著。很多人主动或被动在家办公，与团队进行远程协作。
+ - 自由职业者是另一个趋势，越来越多的人会倾向于自由地选择短期的工作内容，而不是长期地被『绑』在一个组织内。
+ - 很多企业，特别是中小软件企业面临着技术团队管理困难的问题。一方面远程办公给团队的沟通增加了成本，另一方面不同类型团队成员（本地、远程、兼职等）的协作给项目的拆分带来了困难。
+```
+
+## 目标
+
+我们期望能达到如下目标：
+ - 任何有基础技术背景的人，都可以迅速搭建起一套可以运行的web系统，然后将目光集中在特定领域的新功能设计上！！
+ - 『强迫』开发人员构建可通用的功能模块，以提高复用降低后续成本。
+ - 完整的前后端支持，可全栈，可分离。
+ - 方便地将一个大的项目切分成多个独立的模块，分配给任何类型的团队成员，开发人员不需要考虑系统的其他部分。
+ - 每个模块都有足够的灵活性和可扩展性，即可是自成一体的庞大系统，也可以是小巧的复用组件或只是一个简单的工具方法。
+ - 模块之间完全独立。
+ - 模块之间通过简单的配置（或不需要配置）即可一起工作。
+ - 通过实现基础的功能模块，使得一般的项目只需要考虑特定领域的业务逻辑。
+ - 通过一定的规范，任何人开发的功能模块都可以被直接引用。
+ - 扩展特定领域的功能模块，简化行业解决方案的实现。
+
+## 结构
+
+FreeEIS相信：任何功能模块都可以是通用的，只是通用范围的不同。如果开发中不考虑通用性，做多少个项目成本都一样高，如果考虑通用性，开发成本将随着积累的模块数量的增加而下降。（复用，在开发人员的脑袋里本是一个很普通的概念，但现实中，却不易做好。我们允许一个模块做不好，但要让不好的模块非常容易被替换或修改。）
+
+FreeEIS定位为：一个基座 + 一组通用模块 + 一组定制模块 = 一套系统。
+
+ - 一个基座，指内核模块和项目脚手架。
+ - 一组通用模块，指的是多数系统中都需要考虑的功能，如字典管理、日志管理、菜单管理、系统配置管理、错误代码管理、账号管理、组织机构管理、角色管理、权限控制等等。FreeEIS会逐步实现这些通用功能模块，并在可能情况下扩大范围。
+ - 一组定制模块，指的是特定业务需求中，『非通用』的功能模块，需要开发团队根据客户需求定制开发。但在这些模块的开发中，依然可以考虑将它们实现成『相对』通用的模块，以备其他业务或其他人使用。
+
+ 显然，通用模块数量越大，需要定制的模块越少，开发成本越低。
 
 ## 特性
 
@@ -69,16 +103,12 @@ FreeEIS，是一种可扩展的、企业级系统统一开发框架。FreeEIS旨
 
 ```sh
 # 安装前端脚手架
-
 $ git clone https://github.com/freeeis/free-fe-starter-kit.git fe
-
 # 安装依赖包
 $ cd fe
 $ yarn install
-
 # 运行
 $ yarn start
-
 ```
 
 
@@ -88,19 +118,14 @@ $ yarn start
 
 ```sh
 # 安装后端脚手架
-
 $ git clone https://github.com/freeeis/free-be-starter-kit.git be
-
 # 安装依赖包
 $ cd be
 $ yarn install
-
 # 创建存放机密数据的文件（也可手动创建）
 $ touch global.js
-
 # 运行
 $ yarn start
-
 ```
 
 ### 访问系统
@@ -113,11 +138,11 @@ $ yarn start
 
 | 模块      | 前端模块 | 后端模块 | 功能 | 说明|
 | :------- |------- |------- | ----|----: |
-| 内核 | [free-fe-core](https://github.com/freeeis/free-fe-core) | [free-be-core](https://github.com/freeeis/free-be-core) | 加载其他模块|默认添加在脚手架中|
-| 基础功能 | [free-fe-core-modules](https://github.com/freeeis/free-fe-core-modules) | [free-be-core-modules](https://github.com/freeeis/free-be-core-modules)| 数据字典、日志、菜单管理、系统配置、<br>错误代码管理、缓存管理、哀悼日、<br>文件处理、数据校验方法、<br>多语言支持、多皮肤支持等等 | 默认添加在脚手架中|
-| 账号管理 | [free-fe-account](https://github.com/freeeis/free-fe-account) | [free-be-account](https://github.com/freeeis/free-be-account) |账号管理、组织结构管理、权限管理、<br>角色管理、权限控制| 默认添加在脚手架中|
-| 数据库 | / | [free-be-mongodb](https://github.com/freeeis/free-be-mongodb) |数据库操作| 默认添加在脚手架中|
-| 演示模块 | [free-fe-demo](https://github.com/freeeis/free-fe-demo) | [free-be-demo](https://github.com/freeeis/free-be-demo) |演示模块内部结构和使用方法| 默认添加在脚手架中|
+| 内核 | [free-fe-core](https://github.com/freeeis/free-fe-core) | [free-be-core](https://github.com/freeeis/free-be-core) | 加载其他模块|默认在脚手架中|
+| 基础功能 | [free-fe-core-modules](https://github.com/freeeis/free-fe-core-modules) | [free-be-core-modules](https://github.com/freeeis/free-be-core-modules)| 数据字典、日志、菜单管理、<br>系统配置、错误代码管理、<br>缓存管理、哀悼日、文件处理、<br>数据校验方法、多语言支持、<br>多皮肤支持等等 | 默认在脚手架中|
+| 账号管理 | [free-fe-account](https://github.com/freeeis/free-fe-account) | [free-be-account](https://github.com/freeeis/free-be-account) |账号管理、组织结构管理、权限管理、<br>角色管理、权限控制| 默认在脚手架中|
+| 数据库 | / | [free-be-mongodb](https://github.com/freeeis/free-be-mongodb) |数据库操作| 默认在脚手架中|
+| 演示模块 | [free-fe-demo](https://github.com/freeeis/free-fe-demo) | [free-be-demo](https://github.com/freeeis/free-be-demo) |演示模块内部结构和使用方法| 默认在脚手架中|
 
 
 ## 联系我们
@@ -129,4 +154,4 @@ $ yarn start
 
 ## 贡献
 
-FreeEIS虽然已经在多个大型项目中得到了验证，但做为开源项目她依然处于比较早期的阶段，需要各位大牛的帮助一起成长。我们欢迎任何建议或意见或贡献，小到一个字的修改，大到架构的调整建议。我们感谢您的任何捐赠、PR、Issue等等，有任何相关问题都可以发邮件给我们：【[freeeis@xixineis.com](mailto:freeeis@xixineis.com)】。感谢🙏🙏！！
+FreeEIS虽然已经在多个大型项目中得到了验证，但做为开源项目她依然处于比较早期的阶段，需要各位大牛的帮助一起成长。我们欢迎任何建议或意见或贡献，小到一个字的修改，大到架构的调整建议。我们感谢您的任何捐赠、PR、[Issue](https://github.com/freeeis/community/issues)等等，有任何相关问题都可以发邮件给我们：【[freeeis@xixineis.com](mailto:freeeis@xixineis.com)】。感谢🙏🙏！！
