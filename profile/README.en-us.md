@@ -127,4 +127,4 @@ Scan the code to add WeChat to join the communication group
 
 ## Contribute
 
-Although FreeEIS has been verified in many large-scale projects, it is still in its early stages as an open source project and needs the help from all you guys. We welcome any suggestions or comments or contributions, from one-word changes to structural adjustments. We appreciate any donations, PRs, issues, etc., and if you have any related questions, please email us: [[freeeis@xixineis.com] (mailto:freeeis@xixineis.com)]. Thanks 🙏🙏!!
+Although FreeEIS has been verified in many large-scale projects, it is still in its early stages as an open source project and needs the help from all you guys. We welcome any suggestions or comments or contributions, from one-word changes to structural adjustments. We appreciate any donations, PRs, [Issue](https://github.com/freeeis/community/issues) etc., and if you have any related questions, please email us: [[freeeis@xixineis.com] (mailto:freeeis@xixineis.com)]. Thanks 🙏🙏!!
