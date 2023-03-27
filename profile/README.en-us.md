@@ -22,7 +22,7 @@
 
 English | [简体中文](/profile/README.md)
 
-[Documntation](https://freeeis.aslancer.com)（In progress……）
+[Documntation](https://www.freeeis.com)（In progress……）
 
 FreeEIS is a scalable, enterprise-level information system development framework. FreeEIS is designed to solve the increasingly popular problem of system disassembly and assembly in remote collaborative development. And by accumulating more and more functional modules, the system is built faster.
 
